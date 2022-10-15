@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    environment:
+      - HOST=0.0.0.0
+    volumes:
+      - ./:/app:cached
+    ports:
+      - 3001:3001
+    tty: true
